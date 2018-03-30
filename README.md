@@ -2,7 +2,7 @@
 python software to bruteforce a gpg file, crypted by symmetric cipher.
 
 # Help:
-```python decrypt_gpg.py --help
+`python decrypt_gpg.py --help`
 
 usage: decrypt_gpg.py [-h] [-o OUTPUT] [-i INPUT] [-d DICT]
 
@@ -16,7 +16,7 @@ Specifica File:
                         Specify the file to decrypt
   -d DICT, --dict DICT
                         Specfy the dictionary file, if not specified, the input file will be decrypted trying every combinations                     
-```
+
                         
 # Example
 
