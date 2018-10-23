@@ -24,10 +24,15 @@ Specifica File:
                         
 # Example
 `touch file.txt`
+
 `gpg -c file.txt`
+
 Maybe you need wait 10 minutes to clear gpg cache, or clear immediatly with command:
+
 `echo RELOADAGENT | gpg-connect-agent`
+
 Then you can bruteforce with:
+
 `python decrypt_gpg.py -o decrypted_file.txt -i file.txt.gpg`
 
 `python decrypt_gpg.py -o decrypted_file.txt -i file.txt.gpg -d passList.txt`
