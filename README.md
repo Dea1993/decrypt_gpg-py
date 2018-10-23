@@ -18,9 +18,13 @@ Specifica File:
                         Specfy the dictionary file, if not specified, the input file will be decrypted trying every combinations
                         
 # Example
-
-`python decrypt_gpg.py -o decrypted_file.txt -i crypted_file.txt.gpg`
-`python decrypt_gpg.py -o decrypted_file.txt -i crypted_file.txt.gpg -d passList.txt`
+`touch file.txt`
+`gpg -c file.txt`
+Maybe you need wait 10 minutes to clear gpg cache, or clear immediatly with command:
+`echo RELOADAGENT | gpg-connect-agent`
+Then you can bruteforce with:
+`python decrypt_gpg.py -o decrypted_file.txt -i file.txt.gpg`
+`python decrypt_gpg.py -o decrypted_file.txt -i file.txt.gpg -d passList.txt`
 
                         
 # Dependencies

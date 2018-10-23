@@ -46,7 +46,7 @@ def escapeSpChar(s):
 def crack(password, passwordEscaped):
 	""" eseguo il comando per decifrare il file, l'esito dell'operazione viene salvato 
 	# nella variabile cracked """
-	cracked = subprocess.call('gpg -d --output '+decripted+' --passphrase "'+passwordEscaped+'" '+target+' 2>/dev/null', shell=True)
+	cracked = subprocess.call('gpg --pinentry-mode loopback -d --output '+decripted+' --passphrase "'+passwordEscaped+'" '+target+' 2>/dev/null', shell=True)
 
 	#se il valore contenuto il cracked e' 0, significa che il comando ha avuto esito positivo
 	if cracked == 0:
